@@ -1,0 +1,3 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+When I initialize a repository, a hidden folder, .git, is added to the current directory. The .git folder contains the files necessary to start tracking files in the current directory using git. Initializing a directory does not create any commits. Commits are only made when I use the "git commit" command. Thus, if I run "git log" after using "git init" but before "git commit", I get an error message.

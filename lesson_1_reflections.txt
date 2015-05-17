@@ -1,0 +1,19 @@
+QQ1
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+Easy access to the entire history of a file would be helpful because it would mean that I did not need to manually save different versions of the file. While working on a file, especially code, if I make a significant change which requires many small changes or an overall structural change, it is highly possible that something will break. In the event that my new code does not work, I need to be able to consult my old code or possibly revert back to it.
+
+QQ2
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+I think that Git allows saving multiple files at once because it is geared toward software development and power users that are more likely to have interdependent files such as html and css files or various modules/files for a program. Google Docs is aimed at average consumers that will normally be working on word or spreadsheet documents that do not depend on other documents. 
+
+QQ3
+How can you use the commands git log and git diff to view the history of files?
+
+Use git log to view a list of commits or versions of file bundles. Use git diff to compare two versions of files. To use git diff, get the version id's of the two commits that I want to compare. Example: "git diff id1 id2"
+
+QQ4
+How might using version control make you more confident to make changes that could break something?
+
+By using version control, I can be confident that I can always restore to a previous working state even if I make major changes. Version control will help me to better understand how my code has developed and to keep a more detailed log of which changes I've made.
