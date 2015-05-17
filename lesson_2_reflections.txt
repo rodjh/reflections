@@ -1,3 +1,7 @@
 What happens when you initialize a repository? Why do you need to do it?
 
 When I initialize a repository, a hidden folder, .git, is added to the current directory. The .git folder contains the files necessary to start tracking files in the current directory using git. Initializing a directory does not create any commits. Commits are only made when I use the "git commit" command. Thus, if I run "git log" after using "git init" but before "git commit", I get an error message.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+The staging area is different from the working directory/repository because it contains a sub-set (as few as one file, as many as all files) of the files in the working directory/repository. The staging area is useful because it makes it easier to isolate each commit to only reflect one logical change (such as a change to one file). The staging area gives the user more detailed control over which files are committed in each commit rather than forcing the user to commit all files everytime they make a commit. Finally, I think that by limiting commits to only a subset of files specifically chosen by the user to be tracked, git reduces the number of changes that it needs to track and saves space.
