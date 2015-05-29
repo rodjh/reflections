@@ -1,7 +1,41 @@
+QQ
 What happens when you initialize a repository? Why do you need to do it?
 
 When I initialize a repository, a hidden folder, .git, is added to the current directory. The .git folder contains the files necessary to start tracking files in the current directory using git. Initializing a directory does not create any commits. Commits are only made when I use the "git commit" command. Thus, if I run "git log" after using "git init" but before "git commit", I get an error message.
 
+QQ
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 The staging area is different from the working directory/repository because it contains a sub-set (as few as one file, as many as all files) of the files in the working directory/repository. The staging area is useful because it makes it easier to isolate each commit to only reflect one logical change (such as a change to one file). The staging area gives the user more detailed control over which files are committed in each commit rather than forcing the user to commit all files everytime they make a commit. Finally, I think that by limiting commits to only a subset of files specifically chosen by the user to be tracked, git reduces the number of changes that it needs to track and saves space.
+
+QQ
+How can you use the staging area to make sure you have one commit per logical change?
+
+Only stage the files that are related to one logical change at a time.
+
+QQ
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branches are helpful when testing experimental changes to a file. For example, replacing one of the core functions in a file might be a good use of a different branch. That way, I can iteratively develop the new function and related code without worrying about losing the master branch that I had working before.
+
+QQ
+How do the diagrams help you visualize the branch structure?
+
+The diagrams help to understand the relationships between each branch. Specifically, the diagrams make it easier to understand which elements of each branch are shared and which are unique. The diagrams also show how each branch has developed over time and the common ancestors of the branches.
+
+QQ
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+Merging two branches merges two branches of the same document in git. We represent it in the diagram as having two parents because the newly merged file incorporates info from two branches.
+
+QQ
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Pros of Git's automatic merging include convenience, efficiency, comprehensive comparison of differences, and ease of use. Git's merging checks every single line in the two files for differences. If there is a single changed character on one line (something easy for a human to miss), Git will notice the change. In the event that two humans have been working on different sections of the code and there is no overlap between what they have edited, Git merge will automatically and seamlessly merge their changes together saving the humans time and tedium. In the event that the two branches have modified overlapping sections of code, Git intelligently highlights where the conflicts are and delegates to the user how to resolve the conflicts.
+
+Cons of Git's automatic merging include possible breakage of code, blind dependence on the part of the users, and the possibility of causing program bloat. Git merge could break the code if one of the two branches relies on an old implementation of the code that is now changed by the other branch. Git merge might lead to blind dependence by the users on Git's merge function wherein the users do not appreciate the subtleties and ways in which Git merge can fail. Git merge could lead to program bloat if users are not careful to check for differences between the two branches prior to merging them because the two branches could have newly added sections of code which have duplicative purposes.
+
+
+
+
+
