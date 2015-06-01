@@ -1,0 +1,5 @@
+QQ
+When would you want to use a remote repository rather than keeping all your work local?
+
+AA
+I would want to use a remote repository when working with others, especially someone that I cannot easily share files with in-person (e.g., they live in another state). Other benefits of using a remote repository include 1) backing up my work to another source so that if my computer crashes, I will have a backup copy on GitHub; and 2) if I want to share my files as quickly as possible with another collaborator or user.
